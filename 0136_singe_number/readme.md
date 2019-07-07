@@ -25,9 +25,23 @@
 解决方法：
 
 1. 排序，以两位数字为一个单位往后扫描，如果当前两位数字不等，则第一位数字为目标数字
-2. 位运算
+2. 异或运算（XOR）
+
+## 异或运算（XOR）
+
+```vim
+
+a ^ 0 = a
+
+a ^ a = 0
+
+a ^ b ^ a = (a ^ a) ^ b = 0 ^ b = b
+
+```
 
 ## 代码
+
+### 方法1
 
 ```php
 class Solution {
@@ -48,6 +62,25 @@ class Solution {
             }
         }
         return $nums[$index];
+    }
+}
+```
+
+### 方法2
+
+```php
+class Solution {
+
+    /**
+     * @param Integer[] $nums
+     * @return Integer
+     */
+    function singleNumber($nums) {
+        $a = 0;
+        foreach ($nums as $item) {
+            $a ^= $item;
+        }
+        return $a;
     }
 }
 ```
