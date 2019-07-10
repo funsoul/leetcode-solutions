@@ -11,3 +11,7 @@ leetcode solutions
 - c
 - php
 - go
+
+## license
+
+MIT
