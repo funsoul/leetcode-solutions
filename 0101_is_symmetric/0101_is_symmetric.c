@@ -10,7 +10,7 @@ struct TreeNode {
 
 void 
 destroy(struct TreeNode *p){
-    if(p != NULL){ 
+    if(p != NULL){
         destroy(p->left);
         destroy(p->right);
 

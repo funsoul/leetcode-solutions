@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-O1",
+                "-g",
+                "-fsanitize=address",
+                "-fno-omit-frame-pointer",
+                "${file}",
+                "${workspaceFolder}/utils/utils.c",
+                "-o",
+                "${workspaceFolder}/tests/c/a.out"
+            ],
+            "group":{
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

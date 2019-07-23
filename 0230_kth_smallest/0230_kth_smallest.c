@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef int ElemType;
-typedef struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
-}BiTNode, *BiTree;
+#include "../utils/utils.h"
 
 int calcTreeSize(struct TreeNode* root){  
     if (root == NULL)  
@@ -24,25 +16,6 @@ int kthSmallest1(struct TreeNode* root, int k){
         return kthSmallest1(root->left, k);
     } else {
         return kthSmallest1(root->right, k - leftSize - 1);
-    }
-}
-
-/**
- * pre order init tree
- */
-void creatBiTree(BiTree *T) {
-    ElemType val;
-    scanf("%d", &val);
-    if (0 == val) {
-        *T = NULL;
-        return;
-    } else {
-        *T = (BiTNode *)malloc(sizeof(BiTNode));
-        (*T)->val = val;
-        printf("left: ");
-        creatBiTree(&(*T)->left);
-        printf("right: ");
-        creatBiTree(&(*T)->right);
     }
 }
 
