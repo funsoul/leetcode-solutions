@@ -42,7 +42,6 @@ int main(void)
 {
     BiTree T = NULL;
     ElemType ans;
-    printf("root: ");
     creatBiTree(&T);
     // ans = kthSmallest1(T, 3);
     ans = kthSmallest2(T, 3);

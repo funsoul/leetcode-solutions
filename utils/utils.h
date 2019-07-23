@@ -2,6 +2,7 @@
 #define MAX(a, b, max) {max = a > b ? a : b;}
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef int ElemType;
 typedef struct TreeNode {

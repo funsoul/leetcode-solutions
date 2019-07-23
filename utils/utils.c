@@ -1,9 +1,6 @@
 #include "utils.h"
 
-/**
- * pre order init tree
- */
-void creatBiTree(BiTree *T) {
+void createNode(BiTree *T) {
     ElemType val;
     scanf("%d", &val);
     if (0 == val) {
@@ -13,8 +10,17 @@ void creatBiTree(BiTree *T) {
         *T = (BiTNode *)malloc(sizeof(BiTNode));
         (*T)->val = val;
         printf("left: ");
-        creatBiTree(&(*T)->left);
+        createNode(&(*T)->left);
         printf("right: ");
-        creatBiTree(&(*T)->right);
+        createNode(&(*T)->right);
     }
+}
+
+/**
+ * pre order init tree
+ */
+void creatBiTree(BiTree *T) {
+    printf("\n== create bit tree [Pre Order] start ==\nroot: ");
+    createNode(T);
+    printf("== done ==\n\n");
 }
