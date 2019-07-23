@@ -15,8 +15,8 @@ bool isSymmetric(struct TreeNode* root) {
 }
 
 int main(void) {
-    BiTree T = NULL;
-    creatBiTree(&T);
+    BTree T = NULL;
+    createBTree(T);
 
     bool x = isSymmetric(T);
 

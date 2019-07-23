@@ -40,9 +40,9 @@ int kthSmallest2(struct TreeNode* root, int k) {
 
 int main(void)
 {
-    BiTree T = NULL;
+    BTree T = NULL;
     ElemType ans;
-    creatBiTree(&T);
+    createBTree(T);
     // ans = kthSmallest1(T, 3);
     ans = kthSmallest2(T, 3);
     printf("answer: %d\n", ans);
