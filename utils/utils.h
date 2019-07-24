@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+# include <string.h>
 
 #define GET_ARRAY_LEN(array,len){len = (sizeof(array) / sizeof(array[0]));}
 #define MAX(a, b, max) {max = a > b ? a : b;}
@@ -22,3 +23,5 @@ void inOrderRecursionTraverse(BTree T);
 
 void postOrderTraverse(BTree T);
 void postOrderRecursionTraverse(BTree T);
+
+void swap(void *vp1, void *vp2, int size);
